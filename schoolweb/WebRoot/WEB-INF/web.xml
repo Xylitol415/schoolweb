@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+<!-- filter configure -->
+  <filter>
+    <filter-name>Set Character Encoding</filter-name>
+    <filter-class>filters.SetCharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>Set Character Encoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping> 
+  
+ <!-- actionServlet configure --> 
+  
+  <!-- standard servlet configure -->
+  <!--系部信息-->
+   <servlet>
+    <servlet-name>NoticeServlet</servlet-name>
+    <servlet-class>com.servlet.NoticeServlet</servlet-class>
+  </servlet> 
+   <servlet-mapping>
+     <servlet-name>NoticeServlet</servlet-name>
+     <url-pattern>/NoticeServlet</url-pattern>
+  </servlet-mapping> 
+  <!--支部信息-->
+   <servlet>
+    <servlet-name>SonnoticeServlet</servlet-name>
+    <servlet-class>com.servlet.SonnoticeServlet</servlet-class>
+  </servlet> 
+   <servlet-mapping>
+     <servlet-name>SonnoticeServlet</servlet-name>
+     <url-pattern>/SonnoticeServlet</url-pattern>
+  </servlet-mapping>
+  <!--入党积极分子信息-->
+   <servlet>
+    <servlet-name>StudentruServlet</servlet-name>
+    <servlet-class>com.servlet.StudentruServlet</servlet-class>
+  </servlet> 
+   <servlet-mapping>
+     <servlet-name>StudentruServlet</servlet-name>
+     <url-pattern>/StudentruServlet</url-pattern>
+  </servlet-mapping>
+  <!--预备党员信息-->
+   <servlet>
+    <servlet-name>StudentyuServlet</servlet-name>
+    <servlet-class>com.servlet.StudentyuServlet</servlet-class>
+  </servlet> 
+   <servlet-mapping>
+     <servlet-name>StudentyuServlet</servlet-name>
+     <url-pattern>/StudentyuServlet</url-pattern>
+  </servlet-mapping>
+  <!--预备党员信息-->
+   <servlet>
+    <servlet-name>StudentzhServlet</servlet-name>
+    <servlet-class>com.servlet.StudentzhServlet</servlet-class>
+  </servlet> 
+   <servlet-mapping>
+     <servlet-name>StudentzhServlet</servlet-name>
+     <url-pattern>/StudentzhServlet</url-pattern>
+  </servlet-mapping> 
+  <!--党费信息-->
+   <servlet>
+    <servlet-name>DangfeiServlet</servlet-name>
+    <servlet-class>com.servlet.DangfeiServlet</servlet-class>
+  </servlet> 
+   <servlet-mapping>
+     <servlet-name>DangfeiServlet</servlet-name>
+     <url-pattern>/DangfeiServlet</url-pattern>
+  </servlet-mapping>
+  <!--公告信息-->
+   <servlet>
+    <servlet-name>NewsServlet</servlet-name>
+    <servlet-class>com.servlet.NewsServlet</servlet-class>
+  </servlet> 
+   <servlet-mapping>
+     <servlet-name>NewsServlet</servlet-name>
+     <url-pattern>/NewsServlet</url-pattern>
+  </servlet-mapping>
+  <!--组织信息-->
+   <servlet>
+    <servlet-name>ZuzhiServlet</servlet-name>
+    <servlet-class>com.servlet.ZuzhiServlet</servlet-class>
+  </servlet> 
+   <servlet-mapping>
+     <servlet-name>ZuzhiServlet</servlet-name>
+     <url-pattern>/ZuzhiServlet</url-pattern>
+  </servlet-mapping>
+  <!--用户-->
+           <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.servlet.UserServlet</servlet-class>
+  </servlet> 
+   <servlet-mapping>
+     <servlet-name>UserServlet</servlet-name>
+     <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping> 
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
+
